@@ -2,7 +2,7 @@
 
 ## About me 
 
-Hello, I'm Oskar and I'm 20 years old. I'm Computer Science Student at West Pomeranian University of Technology. I really enjoy React and TypeScript. Still learning a lot of new things! 
+Hello, I'm Oskar and I'm 21 years old. I'm Computer Science Student at West Pomeranian University of Technology. I really enjoy React and TypeScript. Still learning a lot of new things! 
 
 [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:oskarkwasniewski@icloud.com)](mailto:oskarkwasniewski@icloud.com)
 
