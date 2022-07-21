@@ -1,7 +1,5 @@
-<img width="100%" src='https://i.ibb.co/ngHZMQn/github-oskarkwasniewski.png" alt="Oskar Kwasniewski background github' />
+# Hi everyone 👋
 
-## About me 
+My name is **Oskar** and I'm 22 years old. I'm currently React Native Developer at [callstack](https://www.callstack.com/) and a Computer Science Student at West Pomeranian University of Technology. 
 
-Hello, I'm Oskar and I'm 22 years old. I'm Computer Science Student at West Pomeranian University of Technology. I really enjoy React Native and TypeScript. 
-
-Contact: [![Gmail Badge](https://img.shields.io/badge/-Gmail-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:oskarkwasniewski@icloud.com)](mailto:oskarkwasniewski@icloud.com)
+Feel free to contact me: [oskarkwasniewski@icloud.com](mailto:oskarkwasniewski@icloud.com)
