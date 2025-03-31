@@ -1,10 +1,10 @@
-import React from 'react';
-import Heading from 'src/components/Heading';
-import Image from 'next/image';
-import AboutImage from 'public/about.svg';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { useIntersectionRef } from 'src/lib/useIntersectionRef';
-import { motion } from 'framer-motion';
+import React from "react";
+import Heading from "src/components/Heading";
+import Image from "next/image";
+import AboutImage from "public/about.svg";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useIntersectionRef } from "src/lib/useIntersectionRef";
+import { motion } from "framer-motion";
 
 const About = () => {
   const [sectionRef, intersection] = useIntersectionRef();
@@ -17,26 +17,25 @@ const About = () => {
           initial={{ x: -200, opacity: 0 }}
           animate={
             intersection?.isIntersecting
-              ? { x: 0, opacity: 1, transition: { delay: 0.4, type: 'spring' } }
+              ? { x: 0, opacity: 1, transition: { delay: 0.4, type: "spring" } }
               : { x: -200, opacity: 0 }
           }
         >
           <p className="text-gray-500 dark:text-gray-200">
-            My name is Oskar Kwaśniewski. I&#39;m a Senior React Native
-            Developer at{' '}
-            <a
+            My name is Pravin Jadhav. I&#39;m a Mobile Developer.
+            {/* <a
               href="https://www.callstack.com/"
               target="__blank"
               rel="noopener"
             >
               {`{Callstack}`}
-            </a>
-            . I&#39;m an open source enthusiast contributing to libraries from
+            </a> */}
+            {/* . I&#39;m an open source enthusiast contributing to libraries from
             the React Native ecosystem. I have over 100+ merged PRs to React
-            Native Core. <br />
+            Native Core. <br /> */}
             I&#39;m focused on strengthening my knowledge around native
             development in Swift, Objective-C, Java and Kotlin. In my free time
-            I enjoy gravel cycling and learning new things.
+            I enjoy cycling and learning new things.
           </p>
           <h3 className="mt-4 text-lg font-semibold dark:text-gray-200">
             Links
@@ -45,7 +44,7 @@ const About = () => {
             <li className="flex m-2">
               <FaGithub className="w-6 h-6 mr-2" />
               <a
-                href="https://github.com/okwasniewski"
+                href="https://github.com/askpravin"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -56,7 +55,7 @@ const About = () => {
               <FaLinkedin className="w-6 h-6 mr-2" />
               <a
                 target="_blank"
-                href="https://www.linkedin.com/in/oskar-kwa%C5%9Bniewski-452977207/"
+                href="https://www.linkedin.com/in/askpravinjadhav"
                 rel="noreferrer"
               >
                 Linkedin
@@ -71,7 +70,7 @@ const About = () => {
               ? {
                   scale: 1,
                   opacity: 1,
-                  transition: { delay: 0.4, type: 'spring', stiffness: 100 },
+                  transition: { delay: 0.4, type: "spring", stiffness: 100 },
                 }
               : { scale: 0.8, opacity: 0 }
           }

@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import { Toaster } from 'react-hot-toast';
-import Footer from 'src/components/Footer';
-import Header from 'src/components/Header';
+import React from "react";
+import { motion } from "framer-motion";
+import Head from "next/head";
+import { Toaster } from "react-hot-toast";
+import Footer from "src/components/Footer";
+import Header from "src/components/Header";
 
 interface MainTemplateProps {
   children: React.ReactNode;
@@ -13,8 +13,8 @@ interface MainTemplateProps {
 
 const MainTemplate = ({
   children,
-  title = 'Home',
-  description = 'Hey! I am Oskar Kwaśniewski, a Software Engieneer from Poland with passion to Open Source. I enjoy building things for the web and mobile.',
+  title = "Home",
+  description = "Hey! I am Oskar Kwaśniewski, a Software Engieneer from Poland with passion to Open Source. I enjoy building things for the web and mobile.",
 }: MainTemplateProps): JSX.Element => {
   const variants = {
     hidden: { opacity: 0 },
@@ -23,11 +23,11 @@ const MainTemplate = ({
   return (
     <>
       <Head>
-        <title>Oskar Kwaśniewski - {title}</title>
+        <title>Pravin Jadhav - {title}</title>
         <meta name="description" content={description} />
         <meta
           property="og:title"
-          content={`Oskar Kwaśniewski - ${title}`}
+          content={`Pravin Jadhav - ${title}`}
           key="ogtitle"
         />
         <meta property="og:description" content={description} key="ogdesc" />
@@ -41,7 +41,7 @@ const MainTemplate = ({
         initial="hidden"
         animate="enter"
         exit="exit"
-        transition={{ type: 'spring' }}
+        transition={{ type: "spring" }}
         className="container w-full h-full md:px-16 px-4 mx-auto scroll-smooth min-h-[88vh]"
       >
         {children}

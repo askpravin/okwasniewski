@@ -1,14 +1,16 @@
-import { motion } from 'framer-motion';
-import Heading from 'src/components/Heading';
-import Icon from 'src/components/Icon';
-import { FaReact, FaGit, FaGithub } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import Heading from "src/components/Heading";
+import Icon from "src/components/Icon";
+import { FaReact, FaGit, FaGithub, FaApple } from "react-icons/fa"; // Added FaApple for iOS dev
 import {
   SiTailwindcss,
   SiTypescript,
   SiVisualstudiocode,
-} from 'react-icons/si';
-import { useIntersectionRef } from 'src/lib/useIntersectionRef';
-import { itemVariants, containerVariants } from 'src/lib/animations';
+  SiFlutter,
+  SiSwift,
+} from "react-icons/si"; // Added SiSwift for iOS dev
+import { useIntersectionRef } from "src/lib/useIntersectionRef";
+import { itemVariants, containerVariants } from "src/lib/animations";
 
 const Skills = () => {
   const [sectionRef, intersection] = useIntersectionRef();
@@ -26,7 +28,7 @@ const Skills = () => {
         <motion.div
           variants={containerVariants}
           initial="hidden"
-          animate={intersection?.isIntersecting ? 'show' : 'hidden'}
+          animate={intersection?.isIntersecting ? "show" : "hidden"}
           className="flex flex-col items-center justify-center mb-10 text-gray-800 dark:text-gray-200 md:justify-around md:flex-row"
         >
           <Icon
@@ -39,6 +41,15 @@ const Skills = () => {
             text="React + React Native"
             variants={itemVariants}
           />
+          <Icon Element={SiFlutter} text="Flutter" variants={itemVariants} />
+          <Icon Element={SiSwift} text="Swift" variants={itemVariants} />{" "}
+          {/* Added Swift */}
+          <Icon
+            Element={FaApple}
+            text="iOS Development"
+            variants={itemVariants}
+          />{" "}
+          {/* Added iOS dev */}
           <Icon
             Element={SiVisualstudiocode}
             text="Visual Studio Code"
