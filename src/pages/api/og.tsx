@@ -1,27 +1,27 @@
-import { ImageResponse } from '@vercel/og';
-import { NextRequest } from 'next/server';
+import { ImageResponse } from "@vercel/og";
+import { NextRequest } from "next/server";
 
 export const config = {
-  runtime: 'edge',
+  runtime: "edge",
 };
 
 export default async function handler(request: NextRequest) {
   try {
     const fontDataBold = await fetch(
-      new URL('../../../assets/Sora-Bold.ttf', import.meta.url),
+      new URL("../../../assets/Sora-Bold.ttf", import.meta.url)
     ).then((res) => res.arrayBuffer());
 
     const { searchParams } = new URL(request.url);
 
-    const title = searchParams.has('title') ? searchParams.get('title') : '';
-    const date = searchParams.has('date') ? searchParams.get('date') : '';
+    const title = searchParams.has("title") ? searchParams.get("title") : "";
+    const date = searchParams.has("date") ? searchParams.get("date") : "";
 
     return new ImageResponse(
       (
         <div
           tw="flex flex-col justify-center items-center w-full h-full"
           style={{
-            backgroundColor: '#4158D0',
+            backgroundColor: "#4158D0",
             background: `linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%)`,
           }}
         >
@@ -31,7 +31,7 @@ export default async function handler(request: NextRequest) {
             </div>
             <div tw="flex w-full justify-between items-center">
               <p>{date}</p>
-              <p>oskarkwasniewski.dev</p>
+              <p>pravinjadhav.dev</p>
             </div>
           </div>
         </div>
@@ -41,12 +41,12 @@ export default async function handler(request: NextRequest) {
         height: 630,
         fonts: [
           {
-            name: 'Sora',
+            name: "Sora",
             data: fontDataBold,
-            style: 'normal',
+            style: "normal",
           },
         ],
-      },
+      }
     );
   } catch {
     return new Response(`Failed to generate the image`, {

@@ -14,7 +14,7 @@ interface MainTemplateProps {
 const MainTemplate = ({
   children,
   title = "Home",
-  description = "Hey! I am Oskar Kwaśniewski, a Software Engieneer from Poland with passion to Open Source. I enjoy building things for the web and mobile.",
+  description = "Hey! I am a Pravin Jadhav, a Software Engieneer from Poland with passion to Open Source. I enjoy building things for the web and mobile.",
 }: MainTemplateProps): JSX.Element => {
   const variants = {
     hidden: { opacity: 0 },

@@ -1,41 +1,41 @@
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import { Sora } from 'next/font/google';
-import { useRouter } from 'next/router';
-import { useEffect, useMemo } from 'react';
+import { AppProps } from "next/app";
+import Head from "next/head";
+import { Sora } from "next/font/google";
+import { useRouter } from "next/router";
+import { useEffect, useMemo } from "react";
 
-import posthog from 'posthog-js';
-import { PostHogProvider } from 'posthog-js/react';
+import posthog from "posthog-js";
+import { PostHogProvider } from "posthog-js/react";
 
-import '../styles/style.css';
+import "../styles/style.css";
 
 // Check that PostHog is client-side (used to handle Next.js SSR)
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
-    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || 'https://app.posthog.com',
+    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://app.posthog.com",
     loaded: (p) => {
-      if (process.env.NODE_ENV === 'development') p.debug();
+      if (process.env.NODE_ENV === "development") p.debug();
     },
   });
 }
 
-const sora = Sora({ subsets: ['latin'], display: 'swap' });
+const sora = Sora({ subsets: ["latin"], display: "swap" });
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   const canonical = useMemo(
-    () => `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`.split('?')?.[0],
-    [router.asPath],
+    () => `${process.env.NEXT_PUBLIC_SITE_URL}${router.asPath}`.split("?")?.[0],
+    [router.asPath]
   );
 
   useEffect(() => {
     // Track page views
-    const handleRouteChange = () => posthog?.capture('$pageview');
-    router.events.on('routeChangeComplete', handleRouteChange);
+    const handleRouteChange = () => posthog?.capture("$pageview");
+    router.events.on("routeChangeComplete", handleRouteChange);
 
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
 
@@ -47,10 +47,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta property="og:locale" content="en_US" />
         <meta
           property="og:site_name"
-          content="Oskar Kwaśniewski"
+          content="Pravin Jadhav"
           key="ogsitename"
         />
-        <meta name="author" content="Oskar Kwaśniewski" />
+        <meta name="author" content="Pravin Jadhav" />
         <meta property="og:url" content={canonical} key="ogurl" />
         <meta
           property="og:image"

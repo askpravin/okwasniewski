@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import Image from 'next/image';
-import Heading from 'src/components/Heading';
-import { itemVariants, containerVariants } from 'src/lib/animations';
-import MainTemplate from 'src/templates/MainTemplate';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import contactImage from 'public/contact.svg';
-import { motion } from 'framer-motion';
-import toast from 'react-hot-toast';
+import Image from "next/image";
+import Heading from "src/components/Heading";
+import { itemVariants, containerVariants } from "src/lib/animations";
+import MainTemplate from "src/templates/MainTemplate";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import contactImage from "public/contact.svg";
+import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 const Contact = () => (
   <MainTemplate title="Contact" description="Let's work together!">
@@ -23,7 +23,7 @@ const Contact = () => (
           <motion.li className="flex m-2" variants={itemVariants}>
             <FaGithub className="w-6 h-6 mr-2" />
             <a
-              href="https://github.com/okwasniewski"
+              href="https://github.com/askpravin"
               target="_blank"
               rel="noreferrer"
             >
@@ -34,7 +34,7 @@ const Contact = () => (
             <FaLinkedin className="w-6 h-6 mr-2" />
             <a
               target="_blank"
-              href="https://www.linkedin.com/in/oskar-kwa%C5%9Bniewski-452977207/"
+              href="https://www.linkedin.com/in/askpravinjadhav/"
               rel="noreferrer"
             >
               Linkedin
@@ -56,8 +56,8 @@ const Contact = () => (
                     </a>
                   </div>,
                   {
-                    icon: '📤',
-                  },
+                    icon: "📤",
+                  }
                 );
               }}
             >
