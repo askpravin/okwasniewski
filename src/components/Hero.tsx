@@ -50,13 +50,13 @@ const Hero = () => {
             variants={itemVariants}
             className="flex flex-col items-center mb-3 lg:flex-row"
           >
-            <Image
+            {/* <Image
               src="/pravin.png"
               width={130}
               height={130}
               alt="Pravin Jadhav"
               className="hidden rounded-full shadow-md dark:shadow-none lg:flex lg:mr-5"
-            />
+            /> */}
             <motion.h1 className="py-2 mr-1 overflow-hidden text-4xl font-semibold text-center text-gray-900 dark:text-gray-200 md:text-5xl">
               {activeIndex === 0 ? "Hey!" : null} I'm <span />
             </motion.h1>
